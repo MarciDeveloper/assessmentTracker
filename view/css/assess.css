@@ -1,0 +1,131 @@
+body {
+    /* width: 100%; */
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+    background-size:100% 100%; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+
+
+nav.navbar {
+    margin-bottom: 100px;
+}
+
+#loginForm, #registerForm, #update_form {
+    padding: 20px;
+}
+
+.banner {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    margin-top: -150px;
+    margin-bottom: 20px;
+}
+
+.banner img {
+    display: block;
+    width: 100vw; /* Set the width of the image to the full viewport width */
+    object-fit: cover;
+}
+
+.assessTitles {
+    margin: 20px;
+    text-align: center;
+}
+
+#header_line {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+div#loginCard , #membersCard, #registerCard {
+    margin-bottom: 100px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+div.card.body {
+    height: 500px;
+    padding-top: 100px;
+}
+/* 
+div.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: gainsboro;
+} */
+
+a.btn.btn-danger {
+    margin-left: 5px;
+}
+
+div#register, #login, #update_student {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: gainsboro;
+}
+
+#assess_card {
+    max-width: 600px;
+    text-align: center;
+}
+
+#sel_assess {
+    max-width: 200px;
+}
+
+/* div#update_student {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 200px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+} */
+
+#divSubmit, #logSubmit, #regSubmit {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#memberSubmit, #loginSubmit, #registerSubmit {
+    width: 100%;
+}
+
+div#aboutContainer {
+    text-align: center;
+}
+
+#aboutHead {
+    margin-bottom: 50px;
+}
+
+#aboutPic {
+    width: 80%;
+}
+
+#loginHead, #membersHead, #registerHead {
+    text-align: center;
+}
+
+footer {
+    padding-top: 20px;
+    color: #fff;
+    position: relative;
+    margin-top: 100px;
+    bottom: 0;
+    background-color: #212529;
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    padding: 20px;
+}
