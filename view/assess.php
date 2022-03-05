@@ -22,6 +22,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assessment Tracker | Assessments</title>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">	
     <link rel="stylesheet" href="css/assess.css">
@@ -73,7 +75,7 @@ session_start();
                         $assessDueDate = $row['assessDueDate'];
                         $unitID = $row['unitID'];
                         $unitName = $row['unitName'];
-                        echo "<li class='list-group-item'><h3>".$row['unitName']."</h3><h4>".$row['assessName']."</h4><p> " . $row['assessDescription'] .  "</p><p> Due Date: " . $row['assessDueDate'] . "</p><div class='col-md-12 text-center'> <a href='../controller/assess_enrol_process.php?assessID=$assessID&studentID=$studentID&unitID=$unitID' class='btn btn-secondary btn-lg btn-block' role='button'>Enrol</a></div></li>"; 
+                        echo "<li data-aos='fade-right' class='list-group-item'><h3>".$row['unitName']."</h3><h4>".$row['assessName']."</h4><p> " . $row['assessDescription'] .  "</p><p> Due Date: " . $row['assessDueDate'] . "</p><div class='col-md-12 text-center'> <a href='../controller/assess_enrol_process.php?assessID=$assessID&studentID=$studentID&unitID=$unitID' class='btn btn-secondary btn-lg btn-block' role='button'>Enrol</a></div></li>"; 
                     endforeach;
                 ?>
              </ul>
@@ -97,19 +99,26 @@ session_start();
                                 $assessID = $row['assessID'];
                                 $unitID = $row['unitID'];
                                 $assessName = $row['assessName'];
-                                echo "<li class='list-group-item'><h4>Assessment number: " .$row['assessID']."</h4><h3>Assessment type: " .$row['assessName']."</h3><p> Student: ".$_SESSION['username']."</p><p> Enrollment date: " . $row['date'] .  "</p><div class='col-md-12 text-center'><a href='../controller/delete_assess_process.php?enID=$enID' class='btn btn-danger btn-lg btn-block' role='button'>Delete</a></div> </li>"; 
+                                echo "<li data-aos='fade-left' class='list-group-item'><h4>Assessment number: " .$row['assessID']."</h4><h3>Assessment type: " .$row['assessName']."</h3><p> Student: ".$_SESSION['username']."</p><p> Enrollment date: " . $row['date'] .  "</p><div class='col-md-12 text-center'><a href='../controller/delete_assess_process.php?enID=$enID' class='btn btn-danger btn-lg btn-block' role='button'>Delete</a></div> </li>"; 
                             endforeach;
                         ?>
                 </ul>
             </div>
         </div>
     </div>
-   
-        <footer>
-              <h2 id= foot>Assessment Tracker &copy; <?php echo date("Y"); ?>, Caccamo Marcello </h2>
-        </footer>
-    
+    <footer class="page-footer font-small blue">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-auto">&copy; <?php echo date("Y");?> Copyright:
+                <h2 id= foot>Caccamo Marcello </h2>
+            </div>
+            <!-- Copyright -->
+    </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- JavaScript AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
