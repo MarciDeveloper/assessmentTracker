@@ -119,8 +119,8 @@ div#aboutContainer {
 
 
 footer {
-    position: absolute;
     bottom: 0;
+    margin-top: 50px;
 }
 /* footer {
     padding-top: 20px;

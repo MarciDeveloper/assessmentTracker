@@ -71,7 +71,7 @@ session_start();
             $password = $row['password'];
         endforeach;
         ?>
-    <h1 id="membersHead"><em><b>Members</b> area</em> only</h1>
+    <h1 id="membersHead"><b>Members</b> only</h1>
     <div class="container" id="update_student">
          <div data-aos="flip-left" class="card" id="membersCard">
          <img src="images/fly-d-art-photographer-OQptsc4P3NM-unsplash.jpg" class="card-img-top" alt="members image">
